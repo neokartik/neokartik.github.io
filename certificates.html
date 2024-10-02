@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/certificate_css.css">
-
-  
-
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -53,42 +50,51 @@
       <div class="row">
         <div class="col-md-4">
           <div class="zoom-effect">
-            <img src="images/excel_certificate.png" class="img-fluid" alt="Certificate 1">
+            <img src="images/excel_certificate.png" class="img-fluid" alt="Certificate 1" data-toggle="modal" data-target="#certificateModal" onclick="openModal('images/excel_certificate.png')">
           </div>
         </div>
         <div class="col-md-4">
           <div class="zoom-effect">
-            <img src="images/power_bi (1).png" class="img-fluid" alt="Certificate 2">
+            <img src="images/power_bi (1).png" class="img-fluid" alt="Certificate 2" data-toggle="modal" data-target="#certificateModal" onclick="openModal('images/power_bi (1).png')">
           </div>
         </div>
         <div class="col-md-4">
           <div class="zoom-effect">
-            <img src="images/sql_certification.png" class="img-fluid" alt="Certificate 3">
+            <img src="images/sql_certification.png" class="img-fluid" alt="Certificate 3" data-toggle="modal" data-target="#certificateModal" onclick="openModal('images/sql_certification.png')">
           </div>
         </div>
         <div class="col-md-4">
             <div class="zoom-effect">
-              <img src="images/aws_coursera.png" class="img-fluid" alt="Certificate 1">
+              <img src="images/aws_coursera.png" class="img-fluid" alt="Certificate 4" data-toggle="modal" data-target="#certificateModal" onclick="openModal('images/aws_coursera.png')">
             </div>
           </div>
           <div class="col-md-4">
             <div class="zoom-effect">
-              <img src="images/udacity_generative_ai.png" class="img-fluid" alt="Certificate 1">
+              <img src="images/udacity_generative_ai.png" class="img-fluid" alt="Certificate 5" data-toggle="modal" data-target="#certificateModal" onclick="openModal('images/udacity_generative_ai.png')">
             </div>
           </div>
           <div class="col-md-4">
             <div class="zoom-effect">
-              <img src="images/microsoft_certificate.png" class="img-fluid" alt="Certificate 1">
+              <img src="images/microsoft_certificate.png" class="img-fluid" alt="Certificate 6" data-toggle="modal" data-target="#certificateModal" onclick="openModal('images/microsoft_certificate.png')">
             </div>
-          </div>
-          <!-- <div class="col-md-4">
-            <div class="zoom-effect">
-              <img src="images/microsoft_certificate.png" class="img-fluid" alt="Certificate 1">
-            </div> -->
           </div>
       </div>
     </div>
   </section>
+
+  <!-- Modal to display full-screen certificate -->
+  <div class="modal fade" id="certificateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="" id="modalImage" class="img-fluid" alt="Certificate">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -99,6 +105,13 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    // Function to open the modal and set the certificate image
+    function openModal(imageSrc) {
+      document.getElementById('modalImage').src = imageSrc;
+    }
+  </script>
 
 </body>
 </html>
